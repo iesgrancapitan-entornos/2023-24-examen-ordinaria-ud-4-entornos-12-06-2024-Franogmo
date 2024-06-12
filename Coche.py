@@ -10,11 +10,21 @@ Extrae una superclase Vehículo con los campos
 
 
 class Vehiculo:
+    """
+    Clase abstracta Vehiculo
+    """
     color = 'rojo';
     fabricante = 'seat';
     num_serie = 1;
 
     def __init__(self):
+        """
+        Constructor vehiculo
+
+        :param: num_serie = int
+        :param: color = str
+        :param: fabricante = str
+        """
         self.__num_serie = Vehiculo.num_serie
         self.__color = Vehiculo.color
         self.__fabricante = Vehiculo.fabricante
@@ -45,10 +55,16 @@ class Vehiculo:
 
 
 class Coche(Vehiculo):
+    """
+    Clase Coche. Hija de Vehiculo
+    """
 
     cilindrada = 1000;
 
     def __init__(self):
+        """
+        Constructor coche
+        """
         super().__init__()
         self.__cilindrada = Coche.cilindrada
 
