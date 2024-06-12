@@ -8,21 +8,26 @@ Extrae una superclase Vehículo con los campos
 :autor: Jaime Rabasco
 """
 
-class Coche:
 
-    num_serie = 1;
-    cilindrada = 1000;
-    fabricante = 'seat';
+class Vehiculo:
+    """
+    Clase abstracta Vehiculo
+    """
     color = 'rojo';
+    fabricante = 'seat';
+    num_serie = 1;
 
     def __init__(self):
-        pass;
+        """
+        Constructor vehiculo
 
-    def __init__(self, num_serie, cilindrada, fabricante, color):
-        self.num_serie = num_serie;
-        self.cilindrada = cilindrada;
-        self.fabricante = fabricante;
-        self.color = color;
+        :param: num_serie = int
+        :param: color = str
+        :param: fabricante = str
+        """
+        self.__num_serie = Vehiculo.num_serie
+        self.__color = Vehiculo.color
+        self.__fabricante = Vehiculo.fabricante
 
     @property
     def num_serie(self):
@@ -33,12 +38,35 @@ class Coche:
         self.__num_serie = value
 
     @property
+    def fabricante(self):
+        return self.__fabricante
+
+    @fabricante.setter
+    def fabricante(self, value):
+        self.__fabricante = value
+
+    @property
     def color(self):
         return self.__color
 
     @color.setter
     def color(self, value: int):
         self.__color = value
+
+
+class Coche(Vehiculo):
+    """
+    Clase Coche. Hija de Vehiculo
+    """
+
+    cilindrada = 1000;
+
+    def __init__(self):
+        """
+        Constructor coche
+        """
+        super().__init__()
+        self.__cilindrada = Coche.cilindrada
 
     @property
     def cilindrada(self):
@@ -47,11 +75,3 @@ class Coche:
     @cilindrada.setter
     def cilindrada(self, value):
         self.__cilindrada = value
-
-    @property
-    def fabricante(self):
-        return self.__fabricante
-
-    @fabricante.setter
-    def fabricante(self, value):
-        self.__fabricante = value
