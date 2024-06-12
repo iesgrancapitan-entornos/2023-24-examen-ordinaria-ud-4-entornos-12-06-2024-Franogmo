@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Francisco Ogallas Moliz Documentation
-=====================================
+Francisco Ogallas Moliz Documentation github
+============================================
 
 .. toctree::
    :maxdepth: 2
