@@ -6,10 +6,10 @@ Autor: Jaime Rabasco Ronda.
 class Perro:
 
     def __init__(self):
-        self.guau = 'Guau'
+        self.ladra = 'Guau'
 
     def ladrar(self):
-        print(self.guau);
+        print(self.ladra);
 
 p = Perro();
 p.ladrar();
